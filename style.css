@@ -6,6 +6,8 @@ body {
     width: 100%;
     height: 100%;
     background-color:white;
+    margin: 0;
+    padding: 0;
 }
 
 section {
@@ -141,8 +143,7 @@ a:hover {
 }
 
 .card-img {
-    width: 100%;
-    height: 50%;
+    width: -webkit-fill-available;
     overflow: hidden;
 }
 
@@ -297,6 +298,13 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left;
+}
+.field .field-name-item{
+    margin:5px;
+}
+.field .field-number-item{
+    margin:5px;    
 }
 .field-submit {
     width: 100%;
@@ -311,12 +319,17 @@ a:hover {
 
 
 @media screen and (max-width: 1024px) {
+    body{
+        width: 100%;
+        height: 100%;
+    }
     .nav-bar {
+        width:  -webkit-fill-available;
         justify-content: space-around;
     }
 
     .nav-right, .nav-left {
-        width: 50%;
+        width: 100%;
     }
 
     .card-container {
@@ -336,16 +349,17 @@ a:hover {
 
 @media screen and (max-width: 768px) {
     body{
-        width: 100%;
-        height: 100%;
+        margin: 0px;
+        padding: 0px;
     }
+  
     .nav-bar {
         width: 100%;
         flex-direction: column;
     }
 
     .nav-right, .nav-left {
-        width: 100%;
+        width:  -webkit-fill-available;
         text-align: center;
     }
 
@@ -390,9 +404,11 @@ a:hover {
     }
 
     .nav-right, .nav-left {
-        width: 100%;
+        width:  -webkit-fill-available;
         text-align: center;
         padding: 10px 0;
+        display:flex;
+        flex-direction: column;
     }
 
     .nav-right a {
@@ -428,9 +444,14 @@ a:hover {
     }
 
     .form-container{
-        width:fit-content
+        width:-webkit-fill-available;
     }
-
+    .field .field-name-item #name{
+        width:50%;
+    }
+    .field .field-number-item #number{
+        width:50%;
+    }
     .footer-container {
         width: 100%;
     }
